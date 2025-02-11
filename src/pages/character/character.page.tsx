@@ -13,7 +13,9 @@ export const CharacterPage: React.FC = () => {
   const { isLoading, data, isError } = useGetCharacterById(id!)
 
   if (isLoading) {
-    return <CenteredCircularProgress> Fetching List </CenteredCircularProgress>
+    return (
+      <CenteredCircularProgress> Fetching Character </CenteredCircularProgress>
+    )
   }
 
   if (isError) {

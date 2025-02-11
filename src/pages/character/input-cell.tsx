@@ -16,29 +16,29 @@ const StyledPaper = styled(Paper)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 4px;
+  padding: 0.25rem;
 `
 
 const StyledBox = styled(Box)`
   width: 100%;
-  padding: 8px;
+  padding: 0.5rem;
 `
 
 const StyledTypography = styled(Typography)`
-  font-size: 28px;
+  font-size: 1.75rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 `
 
 const StyledDivider = styled(Divider)`
-  height: 60px;
-  margin: 2px;
+  height: 3.75rem;
+  margin: 0.125rem;
 `
 
 const StyledIconButton = styled(IconButton)`
-  padding: 10px;
+  padding: 0.625rem;
 `
 
 export const InputCell: FC<

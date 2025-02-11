@@ -1,42 +1,92 @@
-# Vite + React + TypeScript + ESLint + Prettier + Vitest
+# Character Management App
 
-A boilerplate based on Vite, React, TypeScript, ESLint, Prettier, and Vitest.
+This project is a React-based application for viewing and managing character data, built with TypeScript and MUI. It integrates with the Star Wars API (SWAPI) to fetch character details and allows users to navigate between pages.
 
-![Profile Image](/src/assets/profile.png)
+## 📌 Features
 
-Basic environment and find more...
+- Fetch character details from SWAPI
+- Display loading and error states
+- Update character attributes
+- Navigate back to the previous page
+- Fully tested with Vitest and React Testing Library
 
-- [Node.js (^20)](https://nodejs.org/)
-- [pnpm (^8)](https://pnpm.io/)
-- [Vite (^5)](https://vitejs.dev/)
-- [React (^18.2.0)](https://react.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Vitest](https://vitest.dev/)
+## 🛠️ Tech Stack
 
-## Get started
+- **React** (with Hooks)
+- **TypeScript**
+- **Vite.js** (for fast builds and development)
+- **MUI (Material-UI)** (for UI components)
+- **React Router** (for navigation)
+- **Vitest** (for testing)
+- **React Testing Library** (for component tests)
 
-1. Clone this repo or run command below.
+## 🚀 Getting Started
 
+### Prerequisites
+
+Ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (latest LTS recommended)
+- [pnpm](https://pnpm.io/) (preferred package manager)
+
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/yourusername/yourrepo.git
+   cd yourrepo
+   ```
+
+2. Install dependencies:
+
+   ```sh
+   pnpm install
+   ```
+
+3. Start the development server:
+
+   ```sh
+   pnpm dev
+   ```
+
+4. Open your browser and go to:
+
+   ```sh
+   http://localhost:5173
+   ```
+
+## 🧪 Running Tests
+
+To run the test suite, use:
+
+```sh
+pnpm test
 ```
-npx degit eyvindove/vite-react-typescript-eslint-prettier your-awesome-app-name
+
+## 📂 Project Structure
+
+```sh
+
+📦 src
+ ┣ 📂 api
+ ┃ ┗ 📜 swapi.ts       # API hooks for fetching character data
+ ┣ 📂 components
+ ┃ ┣ 📜 input-cell.tsx  # Editable input field component
+ ┃ ┣ 📜 centered-circular-progress.tsx  # Loader component
+ ┣ 📂 pages
+ ┃ ┗ 📜 character.page.tsx  # Character detail page
+ ┣ 📂 tests
+ ┃ ┗ 📜 character.page.test.tsx  # Unit tests for CharacterPage
+ ┣ 📜 App.tsx
+ ┣ 📜 main.tsx
+ ┗ 📜 routes.tsx
 ```
 
-2. Install all dependencies. (uses pnpm as default, you can use others package managers which you like, npm or yarn)
+## 🎯 API Usage
 
+This app fetches character details from the Star Wars API using `useGetCharacterById`:
+
+```ts
+const { data, isLoading, isError } = useGetCharacterById(id)
 ```
-pnpm install
-```
-
-3. Run dev server
-
-```
-pnpm dev
-```
-
-4. Install `ESLint` & `Prettier` extensions for Visual Studio Code, and enable `Format On Save` setting.
-
-5. Enjoy! ☺
-
-If you like this boilerplate, don't forget to give a star! :star2:

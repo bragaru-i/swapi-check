@@ -46,7 +46,7 @@ export function CharacterListPage() {
       />
       <Box
         display='grid'
-        gridTemplateColumns='repeat(auto-fill, minmax(200px, 1fr))'
+        gridTemplateColumns='repeat(auto-fill, minmax(12.5rem, 1fr))'
         gap={2}
         width={'100%'}
       >
