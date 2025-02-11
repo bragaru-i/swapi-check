@@ -21,10 +21,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'pnpm'
 
-      - name: Install pnpm
-        run: corepack enable && corepack prepare pnpm@latest --activate
+      - name: pnpm-setup
+        uses: pnpm/action-setup@v2
 
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
@@ -32,7 +31,7 @@ jobs:
       - name: Build Project
         run: pnpm run build
         env:
-          VITE_BASE: '/your-repo-name/' # Ensure Vite uses the correct base URL
+          VITE_BASE: '/faraway/' # Ensure Vite uses the correct base URL
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
