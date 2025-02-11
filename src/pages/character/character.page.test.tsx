@@ -35,7 +35,7 @@ describe('CharacterPage', () => {
       </MemoryRouter>
     )
 
-    expect(screen.getByText('Fetching List')).toBeInTheDocument()
+    expect(screen.getByText('Fetching Character')).toBeInTheDocument()
   })
 
   it('shows error message when fetch fails', () => {
