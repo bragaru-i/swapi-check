@@ -19,6 +19,7 @@ This project is a React-based application for viewing and managing character dat
 - **React Router** (for navigation)
 - **Vitest** (for testing)
 - **React Testing Library** (for component tests)
+- **React-Query** (for queries) NOTE: Caching is enabled due to server never change data(it can be removed in `main.tsx` file)
 
 ## 🚀 Getting Started
 
@@ -34,7 +35,7 @@ Ensure you have the following installed:
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/yourusername/yourrepo.git
+   git clone https://github.com/bragaru-i/faraway.git
    cd yourrepo
    ```
 
