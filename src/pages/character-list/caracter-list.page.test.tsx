@@ -2,7 +2,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { CharacterListPage } from './character-list.page'
 import { useGetCharacters } from '@/api/swapi'
 import { BrowserRouter } from 'react-router-dom'
-import { Mock } from 'vitest'
+import { afterEach, describe, expect, it, Mock, vi } from 'vitest'
 import { useCharacterList } from './use-character-list'
 // Mock the hooks
 vi.mock('@/api/swapi', async (importOriginal) => {
