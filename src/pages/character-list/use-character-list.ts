@@ -14,7 +14,6 @@ export function useCharacterList() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setDebouncedSearch(search)
-      setPage(1)
       setSearchParams((prev) => {
         const params = new URLSearchParams(prev)
         if (search) {
@@ -36,6 +35,14 @@ export function useCharacterList() {
       return params
     })
   }, [page, setSearchParams])
+
+  // reset page to 1 when search query changes
+  // this will remove bug when querying people with inexistent next pages
+  useEffect(() => {
+    if (debouncedSearch) {
+      setPage(1)
+    }
+  }, [debouncedSearch])
 
   return { debouncedSearch, page, search, setSearch, setPage }
 }
